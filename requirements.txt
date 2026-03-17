@@ -1,0 +1,23 @@
+# ──────────────────────────────────────────────────────────────────
+# Wara-IA — Dépendances Python
+# ──────────────────────────────────────────────────────────────────
+# Installation :
+#   pip install -r requirements.txt
+#
+# Notes :
+#   - torch     : moteur de calcul tensoriel (CPU uniquement par défaut)
+#   - transformers : bibliothèque Hugging Face pour les modèles de langage
+#
+# Pour bénéficier de l'accélération GPU (CUDA), remplacez la ligne
+# torch par celle correspondant à votre version de CUDA :
+#   https://pytorch.org/get-started/locally/
+# ──────────────────────────────────────────────────────────────────
+
+# Modèles de langage pré-entraînés (DialoGPT, etc.)
+transformers>=4.35.0
+
+# Moteur de calcul tensoriel — version CPU (légère, sans CUDA)
+torch>=2.1.0
+
+# Accélération du chargement des modèles Hugging Face
+accelerate>=0.24.0

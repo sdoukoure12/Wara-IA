@@ -1,18 +1,45 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
+# ──────────────────────────────────────────────────────────────────
+# Wara-IA — .gitignore
+# ──────────────────────────────────────────────────────────────────
 
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# ── Environnements virtuels Python ────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
 
-# Additional Ruby/bundler ignore for when you run: bundle install
-/vendor
+# ── Cache Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]           # .pyc, .pyo, .pyd
+*.pdb
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem 
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
+# ── Distribution / packaging ──────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── Cache Hugging Face (modèles téléchargés) ──────────────────────
+.cache/
+huggingface_cache/
+
+# ── Variables d'environnement et secrets ──────────────────────────
+.env
+*.env
+*.secret
+
+# ── Éditeurs et IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Système d'exploitation ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Journaux ──────────────────────────────────────────────────────
+*.log
+logs/
